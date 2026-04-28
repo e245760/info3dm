@@ -32,5 +32,3 @@ col_2 = A[:, 3:5]
 #演習(9)
 B = np.random.rand(5, 2)
 C = np.dot(A, B)
-
-print(C)
