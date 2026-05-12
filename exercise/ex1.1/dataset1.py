@@ -1,6 +1,11 @@
 import unittest
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as font_manager
+font_path = '/Library/Fonts/Arial Unicode.ttf'
+font_prop = font_manager.FontProperties(fname = font_path)
+matplotlib.rcParams['font.family'] = font_prop.get_name()
 
 def true_function(x):
     x = np.array(x)
@@ -16,7 +21,7 @@ class TestTrueFunction(unittest.TestCase):
 x = np.linspace(-1, 1)
 y = true_function(x)
 
-plt.plot(x, y, label="true_function")
+plt.plot(x, y, label="真の関数")
 plt.legend()
 plt.savefig("ex1.1.png")
 plt.close()
