@@ -46,7 +46,7 @@ def create_sample_dataframe(n=20, seed=0):
 df = create_sample_dataframe()
 
 df.to_csv(
-    "exercise/ex1.4/ex1.tsv",
+    "ex1.tsv",
     sep="\t",
     index=False
 )
