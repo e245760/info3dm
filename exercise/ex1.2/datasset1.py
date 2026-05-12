@@ -28,8 +28,11 @@ def create_sample_dataframe(n=20, seed=0):
         "真値": y_true
     })
 
+x = np.linspace(-1, 1)
+y = true_function(x)
 df = create_sample_dataframe()
 
+plt.plot(x, y, label="true_function")
 plt.scatter(df["観測点"], df["真値"], label="sample points")
 plt.xlabel("観測点")
 plt.ylabel("真値")
